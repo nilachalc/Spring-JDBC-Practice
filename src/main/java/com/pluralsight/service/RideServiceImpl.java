@@ -58,6 +58,6 @@ public class RideServiceImpl implements RideService {
 	@Transactional
 	public void deleteRide(Integer id) {
 		rideRepository.deleteRide(id);
-		throw new DataAccessResourceFailureException("Jhar.");
+		//throw new DataAccessResourceFailureException("Jhar.");
 	}
 }

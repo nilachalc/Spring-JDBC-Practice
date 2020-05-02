@@ -19,8 +19,8 @@ public class RestControllerTest {
 		
 		Ride ride = new Ride();
 		
-		ride.setName("Chennai Metro");
-		ride.setDuration(90);
+		ride.setName("Bombay ride");
+		ride.setDuration(190);
 		
 		Ride newRide = restTemplate.postForObject("http://localhost:8082/ride_tracker/ride", ride, Ride.class);
 		
@@ -49,7 +49,7 @@ public class RestControllerTest {
 	public void testGetRide() {
 		RestTemplate restTemplate = new RestTemplate();
 		
-		Ride ride = restTemplate.getForObject("http://localhost:8082/ride_tracker/ride/21", Ride.class);
+		Ride ride = restTemplate.getForObject("http://localhost:8082/ride_tracker/ride/2", Ride.class);
 		
 		System.out.println("Ride Details::");
 		System.out.println("Ride name: " + ride.getName());
@@ -79,7 +79,7 @@ public class RestControllerTest {
 	public void deleteRide() {
 		RestTemplate restTemplate = new RestTemplate();
 		
-		restTemplate.delete("http://localhost:8082/ride_tracker/ride/delete/63");
+		restTemplate.delete("http://localhost:8082/ride_tracker/ride/delete/83");
 	}
 	
 	@Test(timeout=300000)
